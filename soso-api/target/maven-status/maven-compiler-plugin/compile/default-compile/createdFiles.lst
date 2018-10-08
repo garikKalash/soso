@@ -1,0 +1,16 @@
+am\soso\core\api\validator\PartnerValidator.class
+am\soso\core\api\controller\ClientRequestController.class
+am\soso\core\api\validator\ServiceValidator.class
+am\soso\core\api\web\AppModeResolver.class
+am\soso\core\api\controller\CommonDataController.class
+am\soso\core\api\web\PartnerDetailsService.class
+am\soso\core\api\validator\FeedbackValidator.class
+am\soso\core\api\controller\HomeDummyController.class
+am\soso\core\api\CoreApplication.class
+am\soso\core\api\web\WebConfig.class
+am\soso\core\api\validator\ReserveValidator.class
+am\soso\core\api\controller\AuthController.class
+am\soso\core\api\web\SecurityConfig.class
+am\soso\core\api\validator\ClientDtoValidator.class
+am\soso\core\api\controller\PartnerController.class
+am\soso\core\api\validator\MessageValidator.class

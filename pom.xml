@@ -11,7 +11,6 @@
 		<module>soso-service</module>
 		<module>soso-dao</module>
 		<module>soso-model</module>
-		<module>soso-common</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -111,27 +110,6 @@
 			<version>4.3.3.RELEASE</version>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 
 </project>
