@@ -388,13 +388,6 @@ public class PartnerController {
     }
 
 
-    private boolean isUnauthorizedRequestType(HttpServletRequest request) {
-        return request.getRequestURI().equals("/partner/signinpartner/")
-                || request.getRequestURI().equals("/partner/addpartner/")
-                || request.getRequestURI().contains("/partner/partnerphoto/");
-    }
-
-
     private String getBasePathOfResources() {
         return new File(".").getAbsoluteFile().getParentFile().getPath();
     }

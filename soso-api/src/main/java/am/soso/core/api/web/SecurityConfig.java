@@ -16,7 +16,6 @@ import org.springframework.web.filter.CorsFilter;
 
 @EnableWebSecurity
 @Configuration
-@PropertySource("classpath:authentication.properties")
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -26,7 +25,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and()
                 .authorizeRequests()
-                .antMatchers("/authenticate/**").permitAll()
+                .antMatchers("/authenticate/**",
+                        "/commonData/**",
+                        "/partner/filteredpartners/**",
+                        "/partner/filteredpartnersbyradius/**").permitAll()
                 .anyRequest().authenticated()
                 .and().logout().logoutUrl("/authenticate/logout")
                 .and().httpBasic().and().csrf().disable();

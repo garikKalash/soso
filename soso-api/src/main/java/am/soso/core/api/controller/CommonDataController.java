@@ -173,6 +173,8 @@ public class CommonDataController {
     private InputStream getImageInputStreamByImgPath(String imagePath) {
         BufferedImage image = null;
         try {
+            imagePath = imagePath.replaceAll("/", File.separator);
+            imagePath = imagePath.replaceAll("\\\\", File.separator);
             image = ImageIO.read(new File(imagePath));
             ByteArrayOutputStream os = new ByteArrayOutputStream();
             ImageIO.write(image, "jpg", os);
