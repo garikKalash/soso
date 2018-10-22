@@ -41,6 +41,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -238,9 +239,7 @@ public class PartnerController {
     }
 
     private InputStream getImageInputStreamByImgPath(String imagePath) throws IOException {
-        imagePath = imagePath.replaceAll("/", File.separator);
-        imagePath = imagePath.replaceAll("\\\\", File.separator);
-        BufferedImage image = ImageIO.read(new File(imagePath));
+        BufferedImage image = ImageIO.read(Paths.get(imagePath).toFile());
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         ImageIO.write(image, "jpg", os);
         return new ByteArrayInputStream(os.toByteArray());
